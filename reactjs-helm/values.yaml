@@ -10,7 +10,7 @@ image:
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "e756a38d"
+  tag: "0088f4d1"
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
 # This is to override the chart name.
@@ -59,14 +59,14 @@ ingress:
     cert-manager.io/cluster-issuer: "argocd-letsencrypt-prod"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: ""
+    - host: "reacjs-template.seang.shop"
       paths:
         - path: /
           pathType: Prefix
   tls:
-    - secretName: -tls
+    - secretName: reacjs-template-tls
       hosts:
-        - ""
+        - "reacjs-template.seang.shop"
 resources: {}
 # We usually recommend not to specify default resources and to leave this as a conscious
 # choice for the user. This also increases chances charts run on environments with little
